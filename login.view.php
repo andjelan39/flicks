@@ -10,18 +10,18 @@ require_once 'delovi/navbar.php';
                 <div class="form-title">
                     <h2 class="fw-bold mb-3">Login</h2>
                 </div>
-                <form action="">
+                <form action ="login.php" method="POST" onsubmit="return check()">
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control form-control-sm" placeholder="Email" id="email">
+                        <input type="email" class="form-control form-control-sm" placeholder="Email" id="email" name="email">
                         <label for="email">Email</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="password" class="form-control form-control-sm" placeholder="Password"
-                            id="password">
+                            id="password" name="password">
                         <label for="password">Password</label>
                     </div>
                     <div class="mt-3">
-                        <button class="btn btn-bdg">Login</button>
+                        <button type="submit" class="btn btn-bdg" name="loginBtn">Login</button>
                     </div>
                 </form>
                 <div class="mt-3">
@@ -33,5 +33,21 @@ require_once 'delovi/navbar.php';
     </div>
 </div>
 
-
 <?php require_once 'delovi/footer.php'; ?>
+
+<script>
+    function check() {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        if(email == ""){
+            alert("Please enter your email!")
+            return false;
+        }
+        if(password == ""){
+            alert("Please enter your password!")
+            return false;
+        }
+        return true;
+    }
+</script>

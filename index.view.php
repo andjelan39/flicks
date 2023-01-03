@@ -17,7 +17,7 @@ require_once 'delovi/navbar.php';
             <br><br><br>
         </div>
         <h3>
-            Check out more <a href="mcollection.view.php"><i class="fa-solid fa-arrow-right"></i></a>
+            Check out more <a href="collection.php"><i class="fa-solid fa-arrow-right"></i></a>
         </h3>
     </div>
 </div>

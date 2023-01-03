@@ -14,13 +14,23 @@
                     <a style="color: #ffffff;" class="nav-link mx-3" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a style="color:  #ffffff;" class="nav-link mx-3" href="mcollection.view.php">Movies</a>
+                    <a style="color:  #ffffff;" class="nav-link mx-3" href="collection.php">Movies</a>
                 </li>
                 <li class="nav-item d-none d-lg-block">
-                    <a class="nav-link mx-2" href="index.view.php">
+                    <a class="nav-link mx-2" href="index.php">
                         <img src="flicks.png" height="80" />
                     </a>
                 </li>
+                <?php if(isset($_SESSION['id'])): ?>
+                <li class="nav-item">
+                    <a style="color: #ffffff;" class="nav-link mx-3" href="booking.php"><?php echo $_SESSION['name']; ?>
+                    <i class="fa-solid fa-user"></i></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a style="color: #ffffff;" class="nav-link mx-3" href="logout.php">Log Out  
+                    <i class="fa-solid fa-right-from-bracket"></i></a>
+                </li>
+                <?php else: ?>
                 <li class="nav-item">
                     <a style="color: #ffffff;" class="nav-link mx-3" href="register.view.php">Sign Up
                     <i class="fa-solid fa-user"></i></a>
@@ -29,6 +39,7 @@
                     <a style="color: #ffffff;" class="nav-link mx-3" href="login.view.php">Log In  
                     <i class="fa-solid fa-right-to-bracket"></i></a>
                 </li>
+                <?php endif; ?>
             </ul>
         </div>
     </div>
