@@ -10,19 +10,8 @@ require_once 'delovi/navbar.php';
 <div class="container">
     <div class="row g-4 py-2">
         <div class="col-12 col-md-6 col-lg-4">
-            <select name="genre_list" id="genre_list" class="form-control py-3 px-4">
-                <option value="Action">Action</option>
-                <option value="Drama">Drama</option>
-                <option value="Crime">Crime</option>
-                <option value="Thriller">Thriller</option>
-                <option value="Comedy">Comedy</option>
-                <option value="Romance">Romance</option>
-                <option value="Horror">Horror</option>
-            </select>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <button type="button" name="search" id="search" class="btn btn-floating btn-bdg py-3 px-4">
-            <i class="fa-solid fa-magnifying-glass"></i></button>
+            <h4 class="search-title">Search for a movie here: <a href="search.php" type="button" class="btn btn-floating btn-bdg btn-sm">
+            <i class="fa-solid fa-magnifying-glass"></i></a></h4>
         </div>
     </div>
 
